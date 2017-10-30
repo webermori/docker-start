@@ -13,3 +13,9 @@ Learning Docker
 - docker stop webserver
 - docker exec webserver uname -a
 - docker exec -it webserver bash
+
+### Create DB
+- docker run -d --name=dbserver -e "MYSQL_ROOT_PASSWORD=root" -e "MYSQL_DATABASE=docker-wordpress" mysql
+
+### Access Database
+- mysql -uroot -h dbserver -p
